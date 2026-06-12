@@ -13,7 +13,6 @@
       --green-soft: #eaf5ec;
       --text: #1f1f1f;
       --muted: #666666;
-      --bg: #ffffff;
       --light: #f7f9f7;
       --border: #d9e5dc;
       --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -31,12 +30,8 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: #ffffff;
       line-height: 1.65;
-    }
-
-    a {
-      color: var(--green-dark);
     }
 
     header {
@@ -193,35 +188,14 @@
       font-size: 16px;
     }
 
-    .profile-links {
-      margin-top: 20px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .profile-links a {
-      background: var(--green);
-      color: white;
-      padding: 9px 14px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .profile-links a:hover {
-      background: #146b22;
-    }
-
     .contact-mini {
       margin-top: 18px;
       font-size: 15px;
+      font-weight: 700;
     }
 
     .contact-mini a {
       color: var(--green-dark);
-      font-weight: 700;
       text-decoration: none;
     }
 
@@ -230,17 +204,17 @@
     }
 
     #journey,
-    #talks {
+    #events {
       background: var(--light);
       max-width: none;
     }
 
     #journey > h2,
     #journey > .section-intro,
-    #talks > h2,
-    #talks > .section-intro,
+    #events > h2,
+    #events > .section-intro,
     .timeline,
-    .talk-list {
+    .event-list {
       max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
@@ -367,31 +341,31 @@
       background: #146b22;
     }
 
-    .talk-list {
+    .event-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
       margin-top: 30px;
     }
 
-    .talk {
+    .event {
       background: white;
       padding: 20px 22px;
       border-radius: 8px;
       border: 1px solid var(--border);
     }
 
-    .talk h3 {
+    .event h3 {
       margin: 0 0 8px;
       color: var(--green-dark);
       font-size: 18px;
     }
 
-    .talk p {
+    .event p {
       margin: 5px 0;
     }
 
-    .talk-date {
+    .event-date {
       color: var(--muted);
       font-size: 14px;
       font-weight: 700;
@@ -439,7 +413,7 @@
         max-width: 330px;
       }
 
-      .talk-list {
+      .event-list {
         grid-template-columns: 1fr;
       }
     }
@@ -490,9 +464,8 @@
         <a href="#about">About</a>
         <a href="#journey">Journey</a>
         <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
+        <a href="#events">Events</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -504,9 +477,7 @@
       <div class="hero-content">
         <div class="hero-label">Forest Socio-Ecological Systems | Himalayan Ecosystems</div>
 
-        <h1>
-          Linking plant functional traits, ecosystem services, and equitable forest restoration
-        </h1>
+        <h1>Linking plant functional traits, ecosystem services, and equitable forest restoration</h1>
 
         <p>
           I study how Himalayan forests function, how people value and depend on them,
@@ -539,12 +510,6 @@
             change shapes forest-resource access, community wellbeing, and restoration priorities in
             mountain systems.
           </p>
-
-          <div class="profile-links">
-            <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://orcid.org/0000-0001-9317-8286" target="_blank" rel="noopener">ORCID</a>
-            <a href="https://www.researchgate.net/profile/Shipra-Singh-13?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
-          </div>
 
           <p class="contact-mini">
             <strong>Email:</strong>
@@ -587,7 +552,7 @@
           <div class="timeline-date">2015–2017</div>
           <div class="timeline-content">
             <h3>Master of Philosophy</h3>
-            <p><strong>School of Environmental Sciences, Jawaharlal Nehru University, New Delhi, India</strong></p>
+            <p><strong>Jawaharlal Nehru University, New Delhi, India</strong></p>
             <p>
               Thesis: The Effect of Slope Aspects on Vegetation Structure and Composition and
               Soil Physico-chemical Properties in Western Himalayas.
@@ -599,7 +564,7 @@
           <div class="timeline-date">2017–2022</div>
           <div class="timeline-content">
             <h3>Doctor of Philosophy</h3>
-            <p><strong>School of Environmental Sciences, Jawaharlal Nehru University, New Delhi, India</strong></p>
+            <p><strong>Jawaharlal Nehru University, New Delhi, India</strong></p>
             <p>
               Thesis: Functional Traits of Woody Plants in Temperate Forests of Western Himalaya.
             </p>
@@ -695,16 +660,6 @@
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <p class="section-intro">
-        Detailed project descriptions will be added here. This section will later include Himalayan
-        forest ecosystem services, functional trait ecology, restoration planning, stakeholder perception,
-        and modelling projects.
-      </p>
-    </section>
-
     <section id="publications">
       <h2>Publications</h2>
 
@@ -731,13 +686,6 @@
         </div>
 
         <div class="publication">
-          <h3>Assessing the influence of invasion of <em>Lantana camara</em> on vegetation attributes and soil properties across varied disturbance gradients in semi-arid forests of Aravali hills, Delhi</h3>
-          <p><strong>Authors:</strong> Hansda, P.; Kumar, S.; Singh, S.; Garkoti, S. C.</p>
-          <p><strong>Journal:</strong> Plant Ecology, 225(9), 893–906, 2024</p>
-          <p><a href="https://doi.org/10.1007/s11258-024-01441-6" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
           <h3>Species identity and resource availability explain variation among above and below-ground functional traits in Himalayan temperate forests</h3>
           <p><strong>Authors:</strong> Singh, S.; Verma, A. K.; Garkoti, S. C.</p>
           <p><strong>Journal:</strong> Flora, 306, 152363, 2023</p>
@@ -745,38 +693,10 @@
         </div>
 
         <div class="publication">
-          <h3>Understanding soils of mountainous landscapes: Sustainable use of soil ecosystem services and management</h3>
-          <p><strong>Editors:</strong> Bhadouria, R.; Singh, S.; Tripathi, S.; Singh, P.</p>
-          <p><strong>Publisher:</strong> Elsevier, 2023</p>
-          <p><a href="https://scholar.google.com/scholar?q=Understanding+soils+of+mountainous+landscapes+Sustainable+use+of+soil+ecosystem+services+and+management" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
           <h3>Low- to moderate-level forest disturbance effects on plant functional traits and associated soil microbial diversity in Western Himalaya</h3>
           <p><strong>Author:</strong> Singh, S.</p>
           <p><strong>Journal:</strong> Frontiers in Forests and Global Change, 4, 710658, 2021</p>
           <p><a href="https://doi.org/10.3389/ffgc.2021.710658" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Fine root production and nutrient dynamics in relation to stand characteristics of chir pine mixed banj oak forests in central Himalaya</h3>
-          <p><strong>Authors:</strong> Verma, A. K.; Garkoti, S. C.; Singh, S.; Kumar, S.; Kumar, M.</p>
-          <p><strong>Journal:</strong> Flora, 279, 151808, 2021</p>
-          <p><a href="https://doi.org/10.1016/j.flora.2021.151808" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Phytoremediation potential of invasive species growing in mining dumpsite</h3>
-          <p><strong>Authors:</strong> Singh, S.; Saha, L.; Kumar, M.; Bauddh, K.</p>
-          <p><strong>Book:</strong> Phytorestoration of Abandoned Mining and Oil Drilling Sites, pp. 287–305, Elsevier, 2021</p>
-          <p><a href="https://scholar.google.com/scholar?q=Phytoremediation+potential+of+invasive+species+growing+in+mining+dumpsite+Singh+Saha+Kumar+Bauddh" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Plant functional traits in tropical dry forests: a review</h3>
-          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.</p>
-          <p><strong>Book:</strong> Handbook of Research on the Conservation and Restoration of Tropical Dry Forests, pp. 66–88, IGI Global, 2020</p>
-          <p><a href="https://doi.org/10.4018/978-1-7998-0014-9.ch004" target="_blank" rel="noopener">View publication</a></p>
         </div>
 
         <div class="publication">
@@ -793,13 +713,6 @@
           <p><a href="https://scholar.google.com/scholar?q=Understanding+the+role+of+slope+aspect+in+shaping+the+vegetation+attributes+and+soil+properties+in+Montane+ecosystems+Shipra+Singh" target="_blank" rel="noopener">View publication</a></p>
         </div>
 
-        <div class="publication">
-          <h3>Recent development on sustainable biodiesel production using sewage sludge</h3>
-          <p><strong>Authors:</strong> Srivastava, N.; Srivastava, M.; Gupta, V. K.; Manikanta, A.; Mishra, K.; Singh, S.; Singh, S.; Ramteke, P. W.; Mishra, P. K.</p>
-          <p><strong>Journal:</strong> 3 Biotech, 8(5), 245, 2018</p>
-          <p><a href="https://doi.org/10.1007/s13205-018-1264-5" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
       </div>
 
       <p>
@@ -808,55 +721,41 @@
       </p>
     </section>
 
-    <section id="talks">
-      <h2>Talks & Events</h2>
+    <section id="events">
+      <h2>Events</h2>
 
       <p class="section-intro">
-        Selected conference presentations, workshops, and scientific training activities.
+        Selected conference presentations, workshops, summer schools, and scientific training activities.
       </p>
 
-      <div class="talk-list">
+      <div class="event-list">
 
-        <div class="talk">
-          <div class="talk-date">May 2026</div>
+        <div class="event">
+          <div class="event-date">May 2026</div>
           <h3>12th Ecosystem Services Partnership World Conference</h3>
           <p>Oral presentation on perceived ecosystem service flows and trends under climate and land-use change in the Western Indian Himalaya.</p>
           <p>Prague, Czech Republic</p>
         </div>
 
-        <div class="talk">
-          <div class="talk-date">June 2025</div>
+        <div class="event">
+          <div class="event-date">June 2025</div>
           <h3>11th Ecosystem Services Partnership World Conference</h3>
           <p>Oral presentation on integrating stakeholder preferences with ecological sustainability in the Indian Himalayas.</p>
           <p>Darwin, Australia</p>
         </div>
 
-        <div class="talk">
-          <div class="talk-date">November 2024</div>
+        <div class="event">
+          <div class="event-date">November 2024</div>
           <h3>Ecosystem Services Partnership Conference</h3>
           <p>Poster presentation on forest ecosystem services, human demand, ecological supply, and societal values in the Himalayas.</p>
           <p>Wageningen, Netherlands</p>
         </div>
 
-        <div class="talk">
-          <div class="talk-date">September 2024</div>
+        <div class="event">
+          <div class="event-date">September 2024</div>
           <h3>Potsdam Summer School</h3>
-          <p>Participated in the summer school “Ecosystems change & resilience in the Anthropocene.”</p>
+          <p>Participated in “Ecosystems change & resilience in the Anthropocene.”</p>
           <p>Potsdam, Germany</p>
-        </div>
-
-        <div class="talk">
-          <div class="talk-date">2021</div>
-          <h3>British Ecological Society Annual Meeting</h3>
-          <p>Poster presentation on trait-based modelling of temperate forests in the Western Himalaya.</p>
-          <p>Virtual / Liverpool, UK</p>
-        </div>
-
-        <div class="talk">
-          <div class="talk-date">2020</div>
-          <h3>American Geophysical Union Fall Meeting</h3>
-          <p>Poster presentation on trade-offs between intraspecific and interspecific trait variations along an environmental gradient.</p>
-          <p>Virtual</p>
         </div>
 
       </div>
