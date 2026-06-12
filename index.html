@@ -3,275 +3,330 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shipra Singh | Forest Social-Ecological Systems</title>
+
+  <title>Shipra Singh | Forest Socio-Ecological Systems Researcher</title>
 
   <style>
+    :root {
+      --green-dark: #0b4f1f;
+      --green: #1b8f2e;
+      --green-soft: #eaf5ec;
+      --text: #1f1f1f;
+      --muted: #666666;
+      --bg: #ffffff;
+      --light: #f7f9f7;
+      --border: #d9e5dc;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--green-dark);
     }
 
     header {
-      position: fixed;
+      position: sticky;
       top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.92);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 8%;
-      box-sizing: border-box;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      gap: 20px;
     }
 
     .logo {
       font-size: 22px;
-      font-weight: bold;
-      color: #1b5e20;
+      font-weight: 800;
+      color: var(--green-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
-      margin-left: 28px;
+      color: #222222;
       text-decoration: none;
-      color: #222;
-      font-size: 16px;
+      font-size: 15px;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: #1b5e20;
+      color: var(--green);
     }
 
     .hero {
-      height: 100vh;
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
       background:
         linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)),
         url("background.jpg");
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: center;
-      padding: 0 8%;
       color: white;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 80px 30px;
     }
 
-    .hero h3 {
-      color: #63d471;
-      font-size: 26px;
-      margin-bottom: 10px;
+    .hero-label {
+      color: #58e36d;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 52px;
+      max-width: 760px;
+      font-size: 48px;
       line-height: 1.15;
       margin: 0 0 24px;
+      font-weight: 900;
     }
 
     .hero p {
-      font-size: 19px;
       max-width: 760px;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      margin-top: 22px;
-      background: #1b8f2e;
-      color: white;
-      padding: 12px 24px;
+      padding: 12px 18px;
+      border-radius: 4px;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 3px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .button-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: #146b22;
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--green-dark);
+    }
+
+    .button-secondary:hover {
+      background: white;
     }
 
     section {
-      padding: 80px 10%;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 80px 30px;
     }
 
     section h2 {
-      color: #1b5e20;
+      color: var(--green-dark);
       font-size: 34px;
-      margin-bottom: 20px;
+      margin: 0 0 24px;
+      line-height: 1.2;
+    }
+
+    .section-intro {
+      max-width: 900px;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
+
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text p {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .profile-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .profile-links a {
+      background: var(--green);
+      color: white;
+      padding: 9px 14px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .profile-links a:hover {
+      background: #146b22;
+    }
+
+    .contact-mini {
+      margin-top: 18px;
+      font-size: 15px;
+    }
+
+    .contact-mini a {
+      color: var(--green-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-mini a:hover {
+      text-decoration: underline;
+    }
+
+    #journey,
+    #talks {
+      background: var(--light);
+      max-width: none;
+    }
+
+    #journey > h2,
+    #journey > .section-intro,
+    #talks > h2,
+    #talks > .section-intro,
+    .timeline,
+    .talk-list {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .timeline {
+      margin-top: 40px;
+      border-left: 3px solid var(--green-dark);
+      padding-left: 36px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: 8px;
+      width: 15px;
+      height: 15px;
+      background: var(--green-dark);
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-weight: 800;
+      color: var(--green-dark);
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 20px 22px;
+      border-radius: 8px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 8px;
+      color: #123d20;
+      font-size: 20px;
+    }
+
+    .timeline-content p {
+      margin: 6px 0;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
     }
 
     .card {
-      padding: 24px;
-      border: 1px solid #ddd;
+      background: white;
+      border: 1px solid var(--border);
       border-radius: 8px;
-      background: #fafafa;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      color: #1b5e20;
-      margin-top: 0;
+      color: var(--green-dark);
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.35;
     }
 
-  .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  }
-    
-    .about-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 45px;
-  flex-wrap: wrap;
-}
-
-.profile-photo {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-    footer {
-      background: #123d20;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      margin-top: 50px;
+    .card p {
+      margin: 0;
+      font-size: 15px;
     }
-  </style>
-</head>
 
-<body>
-
-  <header>
-    <div class="logo">Shipra Singh</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <div class="hero" id="home">
-    <div class="hero-content">
-      <h3>Forest Social-Ecological Systems | Himalayan Ecosystems</h3>
-      <h1>Linking plant functional traits, ecosystem services, and equitable forest restoration</h1>
-      <p>
-        I study Himalayan forest social-ecological systems, focusing on plant functional traits,
-        forest ecosystem services, stakeholder dependence, livelihood interactions, and equitable
-        access to forest resources under environmental change.
-      </p>
-      <a href="#research" class="button">Explore my research</a>
-    </div>
-  </div>
-
-  <section id="about">
-  <h2>About</h2>
-
-  <div class="about-wrapper">
-    <img src="profile.jpg" alt="Shipra Singh in the field" class="profile-photo">
-
-    <div class="about-text">
-      <p>
-        I am a forest socio-ecological systems researcher studying how ecosystems function,
-  how people value and depend on them, and how restoration can be planned in ways that are
-  ecologically strong, socially fair, and climate resilient.
-</p>
-      </p>
-
-      <p>
-        My research integrates field-based forest inventory, functional trait measurements,
-        stakeholder perception data, and ecosystem service assessment to understand how
-        ecological change shapes forest-resource access, community wellbeing, and restoration
-        priorities in mountain systems.
-      </p>
-
-      <h3>Academic trajectory</h3>
-
-      <ul>
-        <li><strong>Bachelor's and Master's:</strong> Banaras Hindu University, India</li>
-        <li><strong>M.Phil. and Ph.D.:</strong> Jawaharlal Nehru University, New Delhi, India</li>
-        <li><strong>Postdoctoral Research:</strong> International Institute for Applied Systems Analysis, Austria</li>
-      </ul>
-
-      <div class="profile-links">
-        <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="PASTE-YOUR-ORCID-LINK-HERE" target="_blank" rel="noopener">ORCID</a>
-        <a href="PASTE-YOUR-RESEARCHGATE-LINK-HERE" target="_blank" rel="noopener">ResearchGate</a>
-      </div>
-    </div>
-  </div>
-</section>
-  
-  <section id="research">
-    <h2>Research</h2>
-    <p>
-      My research integrates forest ecology, plant functional traits, ecosystem service assessment,
-      stakeholder valuation, and social-ecological systems approaches to understand how mountain
-      forests support biodiversity, livelihoods, and restoration planning.
-    </p>
-
-   <div class="grid">
-  <div class="card">
-    <img src="background.jpg" alt="Himalayan forest landscape">
-    <h3>Himalayan Forest Ecosystem Services</h3>
-    <p>
-      Assessment of provisioning, regulating, cultural, and supporting services across Himalayan
-      forest landscapes and elevation gradients.
-    </p>
-  </div>
-
-  <div class="card">
-    <img src="traits.jpg" alt="Plant functional traits">
-    <h3>Plant Functional Traits</h3>
-    <p>
-      Trait-based analysis of forest composition, ecosystem functioning, disturbance response,
-      and restoration potential.
-    </p>
-  </div>
-
-  <div class="card">
-    <img src="livelihoods.jpg" alt="Forest resource use and livelihoods">
-    <h3>Equity and Livelihoods</h3>
-    <p>
-      Understanding how forest resources are accessed, used, valued, and distributed among
-      mountain communities.
-    </p>
-  </div>
-
-  <div class="card">
-    <img src="climate.jpg" alt="Climate and elevation gradients">
-    <h3>Restoration and Climate Resilience</h3>
-    <p>
-      Developing trait-informed and livelihood-sensitive frameworks for forest restoration,
-      climate adaptation, and sustainable landscape management.
-    </p>
-  </div>
-</div>
-  </section>
-
- <section id="publications">
-  <style>
     .publication-list {
       margin-top: 30px;
     }
@@ -279,15 +334,14 @@
     .publication {
       padding: 22px 24px;
       margin-bottom: 20px;
-      border-left: 5px solid #1b5e20;
+      border-left: 5px solid var(--green-dark);
       background: #fafafa;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
 
     .publication h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       color: #123d20;
       font-size: 20px;
       line-height: 1.35;
@@ -301,7 +355,7 @@
       display: inline-block;
       margin-top: 8px;
       color: white;
-      background: #1b8f2e;
+      background: var(--green);
       padding: 8px 14px;
       border-radius: 4px;
       text-decoration: none;
@@ -312,135 +366,528 @@
     .publication a:hover {
       background: #146b22;
     }
+
+    .talk-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .talk {
+      background: white;
+      padding: 20px 22px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .talk h3 {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 18px;
+    }
+
+    .talk p {
+      margin: 5px 0;
+    }
+
+    .talk-date {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      background: var(--green-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .contact-box p {
+      margin: 8px 0;
+    }
+
+    .contact-box a {
+      font-weight: 700;
+      color: var(--green-dark);
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #123d20;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        max-width: 330px;
+      }
+
+      .talk-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 14px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-label {
+        font-size: 20px;
+      }
+
+      section {
+        padding: 60px 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
   </style>
+</head>
 
-  <h2>Publications</h2>
+<body>
 
-  <p>
-    My publications focus on Himalayan forest ecology, plant functional traits,
-    ecosystem functioning, biomass and carbon stocks, disturbance ecology, soil properties,
-    and forest regeneration dynamics.
-  </p>
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">Shipra Singh</a>
 
-  <div class="publication-list">
-
-    <div class="publication">
-      <h3>Ecological filtering explains species distribution pattern and regeneration potential in Western Himalayan forests</h3>
-      <p><strong>Authors:</strong> Singh, Shipra; Verma, Abhishek K.; Joshi, Rajendra Kumar; Hofhansl, Florian</p>
-      <p><strong>Journal:</strong> Trees, Forests and People, 24, 101194, 2026</p>
-      <p><a href="https://doi.org/10.1016/j.tfp.2026.101194" target="_blank" rel="noopener">View publication</a></p>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="publication">
-      <h3>Topography mediated effect of canopy cover and light intensity explain trait variability among shrub species in Western Himalayan Forest ecosystem</h3>
-      <p><strong>Authors:</strong> Singh, Shipra; Verma, Abhishek K.</p>
-      <p><strong>Journal:</strong> Ecological Indicators, 178, 114000, 2025</p>
-      <p><a href="https://doi.org/10.1016/j.ecolind.2025.114000" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+  <main>
 
-    <div class="publication">
-      <h3>Assessing the influence of invasion of <em>Lantana camara</em> on vegetation attributes and soil properties across varied disturbance gradients in semi-arid forests of Aravali hills, Delhi</h3>
-      <p><strong>Authors:</strong> Hansda, Priya; Kumar, Shailendra; Singh, Shipra; Garkoti, Satish Chandra</p>
-      <p><strong>Journal:</strong> Plant Ecology, 225(9), 893–906, 2024</p>
-      <p><a href="https://doi.org/10.1007/s11258-024-01441-6" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-label">Forest Socio-Ecological Systems | Himalayan Ecosystems</div>
 
-    <div class="publication">
-      <h3>Species identity and resource availability explain variation among above and below-ground functional traits in Himalayan temperate forests</h3>
-      <p><strong>Authors:</strong> Singh, Shipra; Verma, Abhishek K.; Garkoti, Satish Chandra</p>
-      <p><strong>Journal:</strong> Flora, 306, 152363, 2023</p>
-      <p><a href="https://doi.org/10.1016/j.flora.2023.152363" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+        <h1>
+          Linking plant functional traits, ecosystem services, and equitable forest restoration
+        </h1>
 
-    <div class="publication">
-      <h3>Understanding soils of mountainous landscapes: Sustainable use of soil ecosystem services and management</h3>
-      <p><strong>Authors:</strong> Bhadouria, Rahul; Singh, Shipra; Tripathi, Sachchidanand; Singh, Pardeep</p>
-      <p><strong>Publisher:</strong> Elsevier, 2023</p>
-      <p><a href="https://scholar.google.com/scholar?q=Understanding+soils+of+mountainous+landscapes+Sustainable+use+of+soil+ecosystem+services+and+management" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+        <p>
+          I study how Himalayan forests function, how people value and depend on them,
+          and how restoration can support biodiversity, livelihoods, and climate resilience.
+        </p>
 
-    <div class="publication">
-      <h3>Low- to moderate-level forest disturbance effects on plant functional traits and associated soil microbial diversity in Western Himalaya</h3>
-      <p><strong>Author:</strong> Singh, Shipra</p>
-      <p><strong>Journal:</strong> Frontiers in Forests and Global Change, 4, 710658, 2021</p>
-      <p><a href="https://doi.org/10.3389/ffgc.2021.710658" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+        <div class="button-row">
+          <a href="#research" class="button button-primary">Explore my research</a>
+          <a href="#publications" class="button button-secondary">View publications</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="publication">
-      <h3>Fine root production and nutrient dynamics in relation to stand characteristics of chir pine mixed banj oak forests in central Himalaya</h3>
-      <p><strong>Authors:</strong> Verma, Abhishek K.; Garkoti, Satish Chandra; Singh, Shipra; Kumar, Shailendra; Kumar, Mukesh</p>
-      <p><strong>Journal:</strong> Flora, 279, 151808, 2021</p>
-      <p><a href="https://doi.org/10.1016/j.flora.2021.151808" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+    <section id="about">
+      <h2>About</h2>
 
-    <div class="publication">
-      <h3>Phytoremediation potential of invasive species growing in mining dumpsite</h3>
-      <p><strong>Authors:</strong> Singh, Shipra; Saha, Lala; Kumar, Mukesh; Bauddh, Kuldeep</p>
-      <p><strong>Book:</strong> Phytorestoration of Abandoned Mining and Oil Drilling Sites, pp. 287–305, Elsevier, 2021</p>
-      <p><a href="https://scholar.google.com/scholar?q=Phytoremediation+potential+of+invasive+species+growing+in+mining+dumpsite" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+      <div class="about-wrapper">
+        <img src="profile.jpg" alt="Shipra Singh during fieldwork" class="profile-photo">
 
-    <div class="publication">
-      <h3>Plant functional traits in tropical dry forests: a review</h3>
-      <p><strong>Authors:</strong> Singh, Shipra; Verma, Abhishek K.</p>
-      <p><strong>Book:</strong> Handbook of Research on the Conservation and Restoration of Tropical Dry Forests, pp. 66–88, IGI Global Scientific Publishing, 2020</p>
-      <p><a href="https://doi.org/10.4018/978-1-7998-0014-9.ch004" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+        <div class="about-text">
+          <p>
+            I am a forest socio-ecological systems researcher studying how ecosystems function,
+            how people value and depend on them, and how restoration can be planned in ways that are
+            ecologically strong, socially fair, and climate resilient.
+          </p>
 
-    <div class="publication">
-      <h3>Biomass and carbon stocks in different forest types of Western Himalaya</h3>
-      <p><strong>Authors:</strong> Singh, Shipra; Verma, Abhishek K.</p>
-      <p><strong>Journal:</strong> Tropical Ecology, 59(4), 647–658, 2018</p>
-      <p><a href="https://scholar.google.com/scholar?q=Biomass+and+carbon+stocks+in+different+forest+types+of+Western+Himalaya+Shipra+Singh+Verma" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+          <p>
+            My research integrates field-based forest inventory, functional trait measurements,
+            stakeholder perception data, and ecosystem service assessment to understand how ecological
+            change shapes forest-resource access, community wellbeing, and restoration priorities in
+            mountain systems.
+          </p>
 
-    <div class="publication">
-      <h3>Understanding the role of slope aspect in shaping the vegetation attributes and soil properties in Montane ecosystems</h3>
-      <p><strong>Author:</strong> Singh, Shipra</p>
-      <p><strong>Journal:</strong> Tropical Ecology, 59(3), 417–430, 2018</p>
-      <p><a href="https://scholar.google.com/scholar?q=Understanding+the+role+of+slope+aspect+in+shaping+the+vegetation+attributes+and+soil+properties+in+Montane+ecosystems+Shipra+Singh" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+          <div class="profile-links">
+            <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-9317-8286" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://www.researchgate.net/profile/Shipra-Singh-13?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+          </div>
 
-    <div class="publication">
-      <h3>Recent development on sustainable biodiesel production using sewage sludge</h3>
-      <p><strong>Authors:</strong> Srivastava, Neha; Srivastava, Manish; Gupta, Vijai Kumar; Manikanta, Ambepu; Mishra, Kajal; Singh, Shipra; Singh, Sangram; Ramteke, P.W.; Mishra, P.K.</p>
-      <p><strong>Journal:</strong> 3 Biotech, 8(5), 245, 2018</p>
-      <p><a href="https://doi.org/10.1007/s13205-018-1264-5" target="_blank" rel="noopener">View publication</a></p>
-    </div>
+          <p class="contact-mini">
+            <strong>Email:</strong>
+            <a href="mailto:singhs@iiasa.ac.at">singhs@iiasa.ac.at</a> |
+            <a href="mailto:shipra91singh@gmail.com">shipra91singh@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section id="journey">
+      <h2>Academic Journey</h2>
 
-  <p>
-    Full publication list:
-    <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
-  </p>
-</section>
+      <p class="section-intro">
+        My academic and research path has moved from environmental sciences and Himalayan field ecology
+        to trait-based forest research, ecosystem service assessment, and socio-ecological restoration.
+      </p>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>
-      Current projects include Himalayan plant trait database development, forest ecosystem service
-      valuation, stakeholder perception analysis, and trait-based restoration planning.
-    </p>
-  </section>
+      <div class="timeline">
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>
-      I will use this section to share research notes, field reflections, code tutorials, and ideas
-      on forest social-ecological systems and restoration.
-    </p>
-  </section>
+        <div class="timeline-item">
+          <div class="timeline-date">2010–2013</div>
+          <div class="timeline-content">
+            <h3>Bachelor of Science</h3>
+            <p><strong>Zoology Hons. / BZC Group</strong></p>
+            <p>Mahila Mahavidyalaya, Banaras Hindu University, Varanasi, India</p>
+          </div>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: add-your-email-here</p>
-    <p>GitHub: <a href="https://github.com/shiprasingh19">github.com/shiprasingh19</a></p>
-    <p>Google Scholar / ORCID links can be added here.</p>
-  </section>
+        <div class="timeline-item">
+          <div class="timeline-date">2013–2015</div>
+          <div class="timeline-content">
+            <h3>Master of Science</h3>
+            <p><strong>Environmental Sciences</strong></p>
+            <p>Department of Botany, Banaras Hindu University, Varanasi, India</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2015–2017</div>
+          <div class="timeline-content">
+            <h3>Master of Philosophy</h3>
+            <p><strong>School of Environmental Sciences, Jawaharlal Nehru University, New Delhi, India</strong></p>
+            <p>
+              Thesis: The Effect of Slope Aspects on Vegetation Structure and Composition and
+              Soil Physico-chemical Properties in Western Himalayas.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2017–2022</div>
+          <div class="timeline-content">
+            <h3>Doctor of Philosophy</h3>
+            <p><strong>School of Environmental Sciences, Jawaharlal Nehru University, New Delhi, India</strong></p>
+            <p>
+              Thesis: Functional Traits of Woody Plants in Temperate Forests of Western Himalaya.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jun–Sep 2021</div>
+          <div class="timeline-content">
+            <h3>Young Scientists Summer Program</h3>
+            <p><strong>International Institute for Applied Systems Analysis, Laxenburg, Austria</strong></p>
+            <p>
+              Worked on trait-based modelling in temperate forests of the Western Himalaya under
+              Åke Brännström, Jaideep Joshi, and Florian Hofhansl.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Apr 2023–Dec 2025</div>
+          <div class="timeline-content">
+            <h3>Postdoctoral Fellow</h3>
+            <p><strong>International Institute for Applied Systems Analysis, Laxenburg, Austria</strong></p>
+            <p>
+              Designed and led an interdisciplinary research program on forest ecosystem services
+              along Himalayan environmental gradients, integrating plant functional traits, forest structure,
+              stakeholder surveys, ecosystem service assessment, and conservation prioritization.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jan 2026–present</div>
+          <div class="timeline-content">
+            <h3>Research Scholar</h3>
+            <p><strong>International Institute for Applied Systems Analysis, Laxenburg, Austria</strong></p>
+            <p>
+              Conducting model-based research on Plant-FATE parameterisation for European tree species
+              using functional trait datasets and vegetation model simulations.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <p class="section-intro">
+        My research combines forest ecology, plant functional traits, ecosystem services,
+        stakeholder knowledge, and spatial approaches to understand and restore mountain forests.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          <img src="background.jpg" alt="Himalayan forest landscape">
+          <h3>Himalayan Forest Ecosystem Services</h3>
+          <p>
+            Assessment of provisioning, regulating, cultural, and supporting services across
+            Himalayan forest landscapes and elevation gradients.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="traits.jpg" alt="Plant functional traits">
+          <h3>Plant Functional Traits</h3>
+          <p>
+            Trait-based analysis of forest composition, ecosystem functioning, disturbance response,
+            species regeneration, and restoration potential.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="livelihoods.jpg" alt="Forest resource use and livelihoods">
+          <h3>Equity and Livelihoods</h3>
+          <p>
+            Understanding how forest resources are accessed, used, valued, and distributed among
+            mountain communities and stakeholder groups.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="climate.jpg" alt="Climate and elevation gradients">
+          <h3>Restoration and Climate Resilience</h3>
+          <p>
+            Developing trait-informed and livelihood-sensitive frameworks for forest restoration,
+            climate adaptation, and sustainable landscape management.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <p class="section-intro">
+        Detailed project descriptions will be added here. This section will later include Himalayan
+        forest ecosystem services, functional trait ecology, restoration planning, stakeholder perception,
+        and modelling projects.
+      </p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <p class="section-intro">
+        My publications focus on Himalayan forest ecology, plant functional traits,
+        ecosystem functioning, biomass and carbon stocks, disturbance ecology, soil properties,
+        and forest regeneration dynamics.
+      </p>
+
+      <div class="publication-list">
+
+        <div class="publication">
+          <h3>Ecological filtering explains species distribution pattern and regeneration potential in Western Himalayan forests</h3>
+          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.; Joshi, R. K.; Hofhansl, F.</p>
+          <p><strong>Journal:</strong> Trees, Forests and People, 24, 101194, 2026</p>
+          <p><a href="https://doi.org/10.1016/j.tfp.2026.101194" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Topography mediated effect of canopy cover and light intensity explain trait variability among shrub species in Western Himalayan Forest ecosystem</h3>
+          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.</p>
+          <p><strong>Journal:</strong> Ecological Indicators, 178, 114000, 2025</p>
+          <p><a href="https://doi.org/10.1016/j.ecolind.2025.114000" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Assessing the influence of invasion of <em>Lantana camara</em> on vegetation attributes and soil properties across varied disturbance gradients in semi-arid forests of Aravali hills, Delhi</h3>
+          <p><strong>Authors:</strong> Hansda, P.; Kumar, S.; Singh, S.; Garkoti, S. C.</p>
+          <p><strong>Journal:</strong> Plant Ecology, 225(9), 893–906, 2024</p>
+          <p><a href="https://doi.org/10.1007/s11258-024-01441-6" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Species identity and resource availability explain variation among above and below-ground functional traits in Himalayan temperate forests</h3>
+          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.; Garkoti, S. C.</p>
+          <p><strong>Journal:</strong> Flora, 306, 152363, 2023</p>
+          <p><a href="https://doi.org/10.1016/j.flora.2023.152363" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Understanding soils of mountainous landscapes: Sustainable use of soil ecosystem services and management</h3>
+          <p><strong>Editors:</strong> Bhadouria, R.; Singh, S.; Tripathi, S.; Singh, P.</p>
+          <p><strong>Publisher:</strong> Elsevier, 2023</p>
+          <p><a href="https://scholar.google.com/scholar?q=Understanding+soils+of+mountainous+landscapes+Sustainable+use+of+soil+ecosystem+services+and+management" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Low- to moderate-level forest disturbance effects on plant functional traits and associated soil microbial diversity in Western Himalaya</h3>
+          <p><strong>Author:</strong> Singh, S.</p>
+          <p><strong>Journal:</strong> Frontiers in Forests and Global Change, 4, 710658, 2021</p>
+          <p><a href="https://doi.org/10.3389/ffgc.2021.710658" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Fine root production and nutrient dynamics in relation to stand characteristics of chir pine mixed banj oak forests in central Himalaya</h3>
+          <p><strong>Authors:</strong> Verma, A. K.; Garkoti, S. C.; Singh, S.; Kumar, S.; Kumar, M.</p>
+          <p><strong>Journal:</strong> Flora, 279, 151808, 2021</p>
+          <p><a href="https://doi.org/10.1016/j.flora.2021.151808" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Phytoremediation potential of invasive species growing in mining dumpsite</h3>
+          <p><strong>Authors:</strong> Singh, S.; Saha, L.; Kumar, M.; Bauddh, K.</p>
+          <p><strong>Book:</strong> Phytorestoration of Abandoned Mining and Oil Drilling Sites, pp. 287–305, Elsevier, 2021</p>
+          <p><a href="https://scholar.google.com/scholar?q=Phytoremediation+potential+of+invasive+species+growing+in+mining+dumpsite+Singh+Saha+Kumar+Bauddh" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Plant functional traits in tropical dry forests: a review</h3>
+          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.</p>
+          <p><strong>Book:</strong> Handbook of Research on the Conservation and Restoration of Tropical Dry Forests, pp. 66–88, IGI Global, 2020</p>
+          <p><a href="https://doi.org/10.4018/978-1-7998-0014-9.ch004" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Biomass and carbon stocks in different forest types of Western Himalaya</h3>
+          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.</p>
+          <p><strong>Journal:</strong> Tropical Ecology, 59(4), 647–658, 2018</p>
+          <p><a href="https://scholar.google.com/scholar?q=Biomass+and+carbon+stocks+in+different+forest+types+of+Western+Himalaya+Shipra+Singh+Verma" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Understanding the role of slope aspect in shaping the vegetation attributes and soil properties in Montane ecosystems</h3>
+          <p><strong>Author:</strong> Singh, S.</p>
+          <p><strong>Journal:</strong> Tropical Ecology, 59(3), 417–430, 2018</p>
+          <p><a href="https://scholar.google.com/scholar?q=Understanding+the+role+of+slope+aspect+in+shaping+the+vegetation+attributes+and+soil+properties+in+Montane+ecosystems+Shipra+Singh" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+        <div class="publication">
+          <h3>Recent development on sustainable biodiesel production using sewage sludge</h3>
+          <p><strong>Authors:</strong> Srivastava, N.; Srivastava, M.; Gupta, V. K.; Manikanta, A.; Mishra, K.; Singh, S.; Singh, S.; Ramteke, P. W.; Mishra, P. K.</p>
+          <p><strong>Journal:</strong> 3 Biotech, 8(5), 245, 2018</p>
+          <p><a href="https://doi.org/10.1007/s13205-018-1264-5" target="_blank" rel="noopener">View publication</a></p>
+        </div>
+
+      </div>
+
+      <p>
+        <strong>Full publication list:</strong>
+        <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
+      </p>
+    </section>
+
+    <section id="talks">
+      <h2>Talks & Events</h2>
+
+      <p class="section-intro">
+        Selected conference presentations, workshops, and scientific training activities.
+      </p>
+
+      <div class="talk-list">
+
+        <div class="talk">
+          <div class="talk-date">May 2026</div>
+          <h3>12th Ecosystem Services Partnership World Conference</h3>
+          <p>Oral presentation on perceived ecosystem service flows and trends under climate and land-use change in the Western Indian Himalaya.</p>
+          <p>Prague, Czech Republic</p>
+        </div>
+
+        <div class="talk">
+          <div class="talk-date">June 2025</div>
+          <h3>11th Ecosystem Services Partnership World Conference</h3>
+          <p>Oral presentation on integrating stakeholder preferences with ecological sustainability in the Indian Himalayas.</p>
+          <p>Darwin, Australia</p>
+        </div>
+
+        <div class="talk">
+          <div class="talk-date">November 2024</div>
+          <h3>Ecosystem Services Partnership Conference</h3>
+          <p>Poster presentation on forest ecosystem services, human demand, ecological supply, and societal values in the Himalayas.</p>
+          <p>Wageningen, Netherlands</p>
+        </div>
+
+        <div class="talk">
+          <div class="talk-date">September 2024</div>
+          <h3>Potsdam Summer School</h3>
+          <p>Participated in the summer school “Ecosystems change & resilience in the Anthropocene.”</p>
+          <p>Potsdam, Germany</p>
+        </div>
+
+        <div class="talk">
+          <div class="talk-date">2021</div>
+          <h3>British Ecological Society Annual Meeting</h3>
+          <p>Poster presentation on trait-based modelling of temperate forests in the Western Himalaya.</p>
+          <p>Virtual / Liverpool, UK</p>
+        </div>
+
+        <div class="talk">
+          <div class="talk-date">2020</div>
+          <h3>American Geophysical Union Fall Meeting</h3>
+          <p>Poster presentation on trade-offs between intraspecific and interspecific trait variations along an environmental gradient.</p>
+          <p>Virtual</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-box">
+        <p><strong>Shipra Singh</strong></p>
+        <p>Forest socio-ecological systems researcher</p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:singhs@iiasa.ac.at">singhs@iiasa.ac.at</a> |
+          <a href="mailto:shipra91singh@gmail.com">shipra91singh@gmail.com</a>
+        </p>
+
+        <p>
+          <strong>Profiles:</strong>
+          <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> |
+          <a href="https://orcid.org/0000-0001-9317-8286" target="_blank" rel="noopener">ORCID</a> |
+          <a href="https://www.researchgate.net/profile/Shipra-Singh-13?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 Shipra Singh</p>
+    © 2026 Shipra Singh. Built with GitHub Pages.
   </footer>
 
 </body>
