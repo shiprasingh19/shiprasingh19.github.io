@@ -33,6 +33,22 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.hero {
+  max-width: none;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  margin: 0;
+  padding: 0;
+}
+
+.hero h1 {
+  color: white;
+}
+
+.hero p {
+  color: white;
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
