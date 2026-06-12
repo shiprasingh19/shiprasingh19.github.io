@@ -1,622 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Shipra Singh | Forest Socio-Ecological Systems Researcher</title>
 
-  <style>
-    :root {
-      --green-dark: #0b4f1f;
-      --green: #1b8f2e;
-      --green-soft: #eaf5ec;
-      --text: #1f1f1f;
-      --muted: #666666;
-      --light: #f7f9f7;
-      --border: #d9e5dc;
-      --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: #ffffff;
-      line-height: 1.65;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--green-dark);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      color: #222222;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--green);
-    }
-
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)),
-        url("background.jpg");
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 80px 30px;
-    }
-
-    .hero-label {
-      color: #58e36d;
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      max-width: 760px;
-      font-size: 48px;
-      line-height: 1.15;
-      margin: 0 0 24px;
-      font-weight: 900;
-    }
-
-    .hero p {
-      max-width: 760px;
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-
-    .button-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-    }
-
-    .button-primary {
-      background: var(--green);
-      color: white;
-    }
-
-    .button-primary:hover {
-      background: #146b22;
-    }
-
-    .button-secondary {
-      background: rgba(255, 255, 255, 0.92);
-      color: var(--green-dark);
-    }
-
-    .button-secondary:hover {
-      background: white;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 30px;
-    }
-
-    section h2 {
-      color: var(--green-dark);
-      font-size: 34px;
-      margin: 0 0 24px;
-      line-height: 1.2;
-    }
-
-    .section-intro {
-      max-width: 900px;
-      margin-bottom: 35px;
-      font-size: 17px;
-    }
-
-    .about-wrapper {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .profile-photo {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-text p {
-      margin-top: 0;
-      font-size: 16px;
-    }
-
-    .contact-mini {
-      margin-top: 18px;
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .contact-mini a {
-      color: var(--green-dark);
-      text-decoration: none;
-    }
-
-    .contact-mini a:hover {
-      text-decoration: underline;
-    }
-
-    #journey,
-    #events {
-      background: var(--light);
-      max-width: none;
-    }
-
-    #journey > h2,
-    #journey > .section-intro,
-    #events > h2,
-    #events > .section-intro,
-    .timeline,
-    .event-list {
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .timeline {
-      margin-top: 40px;
-      border-left: 3px solid var(--green-dark);
-      padding-left: 36px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 28px;
-      margin-bottom: 36px;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -45px;
-      top: 8px;
-      width: 15px;
-      height: 15px;
-      background: var(--green-dark);
-      border-radius: 50%;
-    }
-
-    .timeline-date {
-      font-weight: 800;
-      color: var(--green-dark);
-    }
-
-    .timeline-content {
-      background: white;
-      padding: 20px 22px;
-      border-radius: 8px;
-      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
-    }
-
-    .timeline-content h3 {
-      margin: 0 0 8px;
-      color: #123d20;
-      font-size: 20px;
-    }
-
-    .timeline-content p {
-      margin: 6px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
-    }
-
-    .card img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      color: var(--green-dark);
-      margin: 0 0 10px;
-      font-size: 20px;
-      line-height: 1.35;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .publication-list {
-      margin-top: 30px;
-    }
-
-    .publication {
-      padding: 22px 24px;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--green-dark);
-      background: #fafafa;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    }
-
-    .publication h3 {
-      margin: 0 0 10px;
-      color: #123d20;
-      font-size: 20px;
-      line-height: 1.35;
-    }
-
-    .publication p {
-      margin: 6px 0;
-    }
-
-    .publication a {
-      display: inline-block;
-      margin-top: 8px;
-      color: white;
-      background: var(--green);
-      padding: 8px 14px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .publication a:hover {
-      background: #146b22;
-    }
-
-    .event-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .event {
-      background: white;
-      padding: 20px 22px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-
-    .event h3 {
-      margin: 0 0 8px;
-      color: var(--green-dark);
-      font-size: 18px;
-    }
-
-    .event p {
-      margin: 5px 0;
-    }
-
-    .event-date {
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .contact-box {
-      background: var(--green-soft);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 28px;
-    }
-
-    .contact-box p {
-      margin: 8px 0;
-    }
-
-    .contact-box a {
-      font-weight: 700;
-      color: var(--green-dark);
-      text-decoration: none;
-    }
-
-    .contact-box a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #123d20;
-      color: white;
-      text-align: center;
-      padding: 28px 20px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 950px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .profile-photo {
-        max-width: 330px;
-      }
-
-      .event-list {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .nav-container {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav {
-        justify-content: flex-start;
-        gap: 14px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero-label {
-        font-size: 20px;
-      }
-
-      section {
-        padding: 60px 22px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
     <div class="nav-container">
-      <a href="#home" class="logo">Shipra Singh</a>
+      <a href="index.html" class="logo">Shipra Singh</a>
 
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#journey">Journey</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="journey.html">Journey</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <section id="home" class="hero">
+    <section class="hero">
       <div class="hero-content">
-        <div class="hero-label">Socio-Ecological Systems </div>
+        <div class="hero-label">Forest Socio-Ecological Systems | Himalayan Ecosystems</div>
 
-        <h1>Linking plant functional traits, ecosystem services, and equitable forest restoration</h1>
+        <h1>
+          Linking plant functional traits, ecosystem services, and equitable forest restoration
+        </h1>
 
         <p>
-          I try to analyze how forest ecosystems function, how people value and depend on them,
+          I study how Himalayan forests function, how people value and depend on them,
           and how restoration can support biodiversity, livelihoods, and climate resilience.
         </p>
 
         <div class="button-row">
-          <a href="#research" class="button button-primary">Explore my research</a>
-          <a href="#publications" class="button button-secondary">View publications</a>
+          <a href="research.html" class="button button-primary">Explore my research</a>
+          <a href="publications.html" class="button button-secondary">View publications</a>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-
-      <div class="about-wrapper">
-        <img src="profile.jpg" alt="Shipra Singh during fieldwork" class="profile-photo">
-
-        <div class="about-text">
-
-          <p>
-            My research integrates field-based forest inventory, functional trait measurements,
-            stakeholder perception data, and ecosystem service assessment to understand how ecological
-            change shapes forest-resource access, community wellbeing, and restoration priorities in
-            mountain systems.
-          </p>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="journey">
-      <h2>Academic Journey</h2>
+    <section>
+      <h2>Research Focus</h2>
 
       <p class="section-intro">
-        My academic and research path has moved from environmental sciences and Himalayan field ecology
-        to trait-based forest research, ecosystem service assessment, and socio-ecological restoration.
-      </p>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-date">2010–2013</div>
-          <div class="timeline-content">
-            <h3>Bachelor of Science</h3>
-            <p><strong>Zoology Hons. / BZC Group</strong></p>
-            <p>Mahila Mahavidyalaya, Banaras Hindu University, Varanasi, India</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2013–2015</div>
-          <div class="timeline-content">
-            <h3>Master of Science</h3>
-            <p><strong>Environmental Sciences</strong></p>
-            <p>Department of Botany, Banaras Hindu University, Varanasi, India</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2015–2017</div>
-          <div class="timeline-content">
-            <h3>Master of Philosophy</h3>
-            <p><strong>Jawaharlal Nehru University, New Delhi, India</strong></p>
-            <p>
-              Thesis: The Effect of Slope Aspects on Vegetation Structure and Composition and
-              Soil Physico-chemical Properties in Western Himalayas.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2017–2022</div>
-          <div class="timeline-content">
-            <h3>Doctor of Philosophy</h3>
-            <p><strong>Jawaharlal Nehru University, New Delhi, India</strong></p>
-            <p>
-              Thesis: Functional Traits of Woody Plants in Temperate Forests of Western Himalaya.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Jun–Sep 2021</div>
-          <div class="timeline-content">
-            <h3>Young Scientists Summer Program</h3>
-            <p><strong>International Institute for Applied Systems Analysis, Laxenburg, Austria</strong></p>
-            <p>
-              Worked on trait-based modelling in temperate forests of the Western Himalaya under
-              Åke Brännström, Jaideep Joshi, and Florian Hofhansl.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Apr 2023–Dec 2025</div>
-          <div class="timeline-content">
-            <h3>Postdoctoral Fellow</h3>
-            <p><strong>International Institute for Applied Systems Analysis, Laxenburg, Austria</strong></p>
-            <p>
-              Designed and led an interdisciplinary research program on forest ecosystem services
-              along Himalayan environmental gradients, integrating plant functional traits, forest structure,
-              stakeholder surveys, ecosystem service assessment, and conservation prioritization.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Jan 2026–present</div>
-          <div class="timeline-content">
-            <h3>Research Scholar</h3>
-            <p><strong>International Institute for Applied Systems Analysis, Laxenburg, Austria</strong></p>
-            <p>
-              Conducting model-based research on Plant-FATE parameterisation for European tree species
-              using functional trait datasets and vegetation model simulations.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="research">
-      <h2>Research</h2>
-
-      <p class="section-intro">
-        My research combines forest ecology, plant functional traits, ecosystem services,
-        stakeholder knowledge, and spatial approaches to understand and restore mountain forests.
+        My work connects forest ecology, plant functional traits, ecosystem services,
+        stakeholder knowledge, and restoration planning in Himalayan mountain landscapes.
       </p>
 
       <div class="grid">
 
         <div class="card">
           <img src="background.jpg" alt="Himalayan forest landscape">
-          <h3>Himalayan Forest Ecosystem Services</h3>
+          <h3>Forest Ecosystem Services</h3>
           <p>
-            Assessment of provisioning, regulating, cultural, and supporting services across
-            Himalayan forest landscapes and elevation gradients.
+            Understanding how Himalayan forests provide ecological, cultural, and livelihood benefits
+            across environmental gradients.
           </p>
         </div>
 
@@ -624,8 +72,8 @@
           <img src="traits.jpg" alt="Plant functional traits">
           <h3>Plant Functional Traits</h3>
           <p>
-            Trait-based analysis of forest composition, ecosystem functioning, disturbance response,
-            species regeneration, and restoration potential.
+            Using leaf, stem, root, and whole-plant traits to assess ecosystem functioning,
+            regeneration, and restoration potential.
           </p>
         </div>
 
@@ -633,7 +81,7 @@
           <img src="livelihoods.jpg" alt="Forest resource use and livelihoods">
           <h3>Equity and Livelihoods</h3>
           <p>
-            Understanding how forest resources are accessed, used, valued, and distributed among
+            Studying how forest resources are accessed, valued, and distributed among
             mountain communities and stakeholder groups.
           </p>
         </div>
@@ -642,134 +90,11 @@
           <img src="climate.jpg" alt="Climate and elevation gradients">
           <h3>Restoration and Climate Resilience</h3>
           <p>
-            Developing trait-informed and livelihood-sensitive frameworks for forest restoration,
-            climate adaptation, and sustainable landscape management.
+            Developing trait-informed and socially fair approaches for forest restoration
+            and climate adaptation.
           </p>
         </div>
 
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-
-      <p class="section-intro">
-        My publications focus on Himalayan forest ecology, plant functional traits,
-        ecosystem functioning, biomass and carbon stocks, disturbance ecology, soil properties,
-        and forest regeneration dynamics.
-      </p>
-
-      <div class="publication-list">
-
-        <div class="publication">
-          <h3>Ecological filtering explains species distribution pattern and regeneration potential in Western Himalayan forests</h3>
-          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.; Joshi, R. K.; Hofhansl, F.</p>
-          <p><strong>Journal:</strong> Trees, Forests and People, 24, 101194, 2026</p>
-          <p><a href="https://doi.org/10.1016/j.tfp.2026.101194" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Topography mediated effect of canopy cover and light intensity explain trait variability among shrub species in Western Himalayan Forest ecosystem</h3>
-          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.</p>
-          <p><strong>Journal:</strong> Ecological Indicators, 178, 114000, 2025</p>
-          <p><a href="https://doi.org/10.1016/j.ecolind.2025.114000" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Species identity and resource availability explain variation among above and below-ground functional traits in Himalayan temperate forests</h3>
-          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.; Garkoti, S. C.</p>
-          <p><strong>Journal:</strong> Flora, 306, 152363, 2023</p>
-          <p><a href="https://doi.org/10.1016/j.flora.2023.152363" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Low- to moderate-level forest disturbance effects on plant functional traits and associated soil microbial diversity in Western Himalaya</h3>
-          <p><strong>Author:</strong> Singh, S.</p>
-          <p><strong>Journal:</strong> Frontiers in Forests and Global Change, 4, 710658, 2021</p>
-          <p><a href="https://doi.org/10.3389/ffgc.2021.710658" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Biomass and carbon stocks in different forest types of Western Himalaya</h3>
-          <p><strong>Authors:</strong> Singh, S.; Verma, A. K.</p>
-          <p><strong>Journal:</strong> Tropical Ecology, 59(4), 647–658, 2018</p>
-          <p><a href="https://scholar.google.com/scholar?q=Biomass+and+carbon+stocks+in+different+forest+types+of+Western+Himalaya+Shipra+Singh+Verma" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-        <div class="publication">
-          <h3>Understanding the role of slope aspect in shaping the vegetation attributes and soil properties in Montane ecosystems</h3>
-          <p><strong>Author:</strong> Singh, S.</p>
-          <p><strong>Journal:</strong> Tropical Ecology, 59(3), 417–430, 2018</p>
-          <p><a href="https://scholar.google.com/scholar?q=Understanding+the+role+of+slope+aspect+in+shaping+the+vegetation+attributes+and+soil+properties+in+Montane+ecosystems+Shipra+Singh" target="_blank" rel="noopener">View publication</a></p>
-        </div>
-
-      </div>
-
-      <p>
-        <strong>Full publication list:</strong>
-        <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
-      </p>
-    </section>
-
-    <section id="events">
-      <h2>Events</h2>
-
-      <p class="section-intro">
-        Selected conference presentations, workshops, summer schools, and scientific training activities.
-      </p>
-
-      <div class="event-list">
-
-        <div class="event">
-          <div class="event-date">May 2026</div>
-          <h3>12th Ecosystem Services Partnership World Conference</h3>
-          <p>Oral presentation on perceived ecosystem service flows and trends under climate and land-use change in the Western Indian Himalaya.</p>
-          <p>Prague, Czech Republic</p>
-        </div>
-
-        <div class="event">
-          <div class="event-date">June 2025</div>
-          <h3>11th Ecosystem Services Partnership World Conference</h3>
-          <p>Oral presentation on integrating stakeholder preferences with ecological sustainability in the Indian Himalayas.</p>
-          <p>Darwin, Australia</p>
-        </div>
-
-        <div class="event">
-          <div class="event-date">November 2024</div>
-          <h3>Ecosystem Services Partnership Conference</h3>
-          <p>Poster presentation on forest ecosystem services, human demand, ecological supply, and societal values in the Himalayas.</p>
-          <p>Wageningen, Netherlands</p>
-        </div>
-
-        <div class="event">
-          <div class="event-date">September 2024</div>
-          <h3>Potsdam Summer School</h3>
-          <p>Participated in “Ecosystems change & resilience in the Anthropocene.”</p>
-          <p>Potsdam, Germany</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-
-      <div class="contact-box">
-        <p><strong>Shipra Singh</strong></p>
-        <p>Forest socio-ecological systems researcher</p>
-
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:singhs@iiasa.ac.at">singhs@iiasa.ac.at</a> |
-          <a href="mailto:shipra91singh@gmail.com">shipra91singh@gmail.com</a>
-        </p>
-
-        <p>
-          <strong>Profiles:</strong>
-          <a href="https://scholar.google.com/citations?user=8KyphvMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> |
-          <a href="https://orcid.org/0000-0001-9317-8286" target="_blank" rel="noopener">ORCID</a> |
-          <a href="https://www.researchgate.net/profile/Shipra-Singh-13?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
-        </p>
       </div>
     </section>
 
